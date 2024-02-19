@@ -18,9 +18,6 @@ class HandlerImpl(
     override val timeout: Duration
         get() = 15L.toDuration(DurationUnit.SECONDS)
 
-    //  private val queue = Channel<Event>()
-
-
     override fun performOperation() {
         return runBlocking {
             withContext(context) {
